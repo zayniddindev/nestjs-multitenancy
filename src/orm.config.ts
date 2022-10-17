@@ -4,11 +4,11 @@ import { join } from 'path';
 
 module.exports = {
   type: 'postgres',
-  host: 'localhost',
+  host: '127.0.0.1',
   port: 5432,
-  username: 'thomasvanderstraeten',
-  password: 'root',
-  database: 'nestjs-multi-tenant',
+  username: 'postgres',
+  password: '1234',
+  database: 'multitenant',
   namingStrategy: new SnakeNamingStrategy(),
   logging: true,
   autoLoadEntities: true,

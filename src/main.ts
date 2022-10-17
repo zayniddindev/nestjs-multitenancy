@@ -13,6 +13,8 @@ async function bootstrap() {
 
   const schemas = await getManager().query('select schema_name as name from information_schema.schemata;');
 
+  console.log(schemas);
+  
   for (let i = 0; i < schemas.length; i += 1) {
     const { name: schema } = schemas[i];
 
@@ -24,6 +26,6 @@ async function bootstrap() {
     }
   }
 
-  await app.listen(3000);
+  await app.listen(3000, () => console.log(`Listening on port 3000`));
 }
 bootstrap();
